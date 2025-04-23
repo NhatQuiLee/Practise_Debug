@@ -45,16 +45,17 @@ int main()
     DisplayArray(array, size);
 
     int number;
-    printf("\nEnter number: ");
+    printf("Enter number: ");
     scanf("%d", &number);
+    int position = FindPositionOfNumberInArray(array, size, number);
 
-    if (FindPositionOfNumberInArray(array, size, number) == -1)
+    if (position == -1)
     {
         printf("Number %d is not found in the array", number);
     }
     else 
     {
-        printf("Number %d is found at position %d", number, FindPositionOfNumberInArray(array, size, number));
+        printf("Number %d is found at position %d", number, position);
     }
 
     return 0;
